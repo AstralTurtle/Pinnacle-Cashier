@@ -7,6 +7,22 @@
     display: flex;
     flex-direction: column; 
     align-items: center;
+    /* ADD THIS: This allows absolute children to stay inside the card */
+    position: relative; 
+}
+
+.price-blocker {
+    position: absolute;
+    /* Adjust these to match the exact placement of your back-card price */
+    top: 60px; 
+    right: 60px;
+    
+    /* Adjust size to fully cover the number */
+    width: 100px; 
+    height: 100px;
+    
+    object-fit: contain;
+    z-index: 20; /* Ensures it stays on top of everything else */
 }
 
 .header {
